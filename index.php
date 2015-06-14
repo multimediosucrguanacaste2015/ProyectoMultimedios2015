@@ -50,7 +50,7 @@
                     </li>
                     <div id="section1" class="collapse collapse-in">
                         <ul class="nav nav-pills nav-stacked span3">
-                            <li><a id="agregarEstudiante"  href="#">Agregar</a>
+                            <li class="submenu"><a id="agregarEstudiante"  href="#"><span class="glyphicon glyphicon-plus"></span> Agregar</a>
                             </li>
                             <li><a href="">Modificar</a>
                             </li>
@@ -124,6 +124,11 @@
                    <div class="panel panel-default">
                        <div class="panel-heading">Panel Principal</div>
                        <div  id="contenido" class="panel-body">
+                          <div class="texto">
+                            <img class="img-responsive"  src="img/checking1.svg" alt="">
+                            <h1>Bienvenido al sistema de control de estudiantes</h1>
+                            <p> El sistema le permitirá gestionar los estudiantes, sus cursos y notas asociadas, así como también los profesores asignados a cada curso y los respectivos niveles en los cuales se imparten.</p>
+                          </div>
 
                        </div>
                    </div>

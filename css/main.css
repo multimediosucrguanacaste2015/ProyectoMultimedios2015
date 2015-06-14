@@ -10,3 +10,17 @@ body {
 a {
     color:white;
 }
+
+img {
+    margin: 0% 0% 0% 40%;
+    width: 10%;
+    height: 10%;
+}
+
+.texto {
+    text-align: center;
+}
+
+ul>li>a:hover {
+    color:indianred;
+}
