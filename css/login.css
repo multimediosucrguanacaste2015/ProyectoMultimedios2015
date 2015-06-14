@@ -1,0 +1,8 @@
+body{
+    background-color: #ffffff;
+}
+
+.btn-me, .btn-me:hover, .btn-me:active {
+    background-color: #C8E5F3;
+    color: #44809d;
+}
