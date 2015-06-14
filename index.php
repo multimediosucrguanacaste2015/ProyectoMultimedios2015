@@ -41,18 +41,18 @@
                 <div class="panel panel-info">
                    <div class="panel-heading"><h4>Inicie sesión</h4></div>
                     <div class="panel-body">
-                        <form action="inserta.php" method="post">
+                        <form action="mod/login.php" method="post">
                             <!-- input-group e input-group-addon, permiten añadir imagenes a los campos de texto.-->
                             <div class="form-group">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                    <input type="text" class="form-control" id="Nombre" name="nombre" placeholder="Usuario">
+                                    <input type="text" class="form-control" id="Nombre" name="usuario" placeholder="Usuario">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                    <input type="password" class="form-control" id="Apellido1" name="Apellido1" placeholder="Contraseña">
+                                    <input type="password" class="form-control" id="Apellido1" name="password" placeholder="Contraseña">
                                 </div>
                             </div>
 
