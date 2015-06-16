@@ -36,28 +36,45 @@
             <div class="col-md-6">
                 <form action="inserta.php" method="post">
                     <div class="form-group">
-                        <label for="Nombre">Nombre</label>
+                       <div class="input-group">
+                           <label for="Nombre" class="input-group-addon">Nombre</label>
                         <input type="text" class="form-control" id="Nombre" name="nombre" placeholder="Víctor">
+                       </div>
                     </div>
                     <div class="form-group">
-                        <label for="Apellido">Primer Apellido</label>
+                       <div class="input-group">
+                           <label for="Apellido" class="input-group-addon">Primer Apellido</label>
                         <input type="text" class="form-control" id="Apellido1" name="Apellido1" placeholder="Centeno">
+                       </div>
+
                     </div>
                     <div class="form-group">
-                        <label for="Apellido2">Segundo Apellido</label>
+                       <div class="input-group">
+                           <label for="Apellido2" class="input-group-addon">Segundo Apellido</label>
                         <input type="text" class="form-control" id="Apellido2" name="Apellido2" placeholder="Gómez">
+                       </div>
+
                     </div>
                     <div class="form-group">
-                        <label for="fechaNacimiento">Fecha de nacimiento</label>
-                        <input type="text" class="form-control" id="fechaNacimiento" name="fechaNacimiento" placeholder="11-11-1900">
+                       <div class="input-group">
+                           <label for="fechaNacimiento" class="input-group-addon">Fecha de nacimiento</label>
+                        <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento" >
+                       </div>
+
                     </div>
                     <div class="form-group">
-                        <label for="carnet">Carnet</label>
+                       <div class="input-group">
+                           <label for="carnet" class="input-group-addon">Carnet</label>
                         <input type="text" class="form-control" id="carnet" name="carnet">
+                       </div>
+
                     </div>
                     <div class="form-group">
-                        <label for="telefono">Teléfono</label>
+                       <div class="input-group">
+                        <label for="telefono" class="input-group-addon">Teléfono</label>
                         <input type="text" class="form-control" id="telefono" name="telefono" placeholder="555 555 55">
+                       </div>
+
                     </div>
                     <div class="radio">
   <label>
