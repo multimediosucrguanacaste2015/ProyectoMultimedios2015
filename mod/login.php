@@ -13,6 +13,11 @@ mysql_select_db('proyectomultimedios')
     $resultado = mysql_query($consulta) or die('Error en la consulta' . mysql_error());
 
 $row = mysql_fetch_array($resultado);
-    echo"$row[0]";
-    echo"$row[1]";
+
+if($row[0]!='' && $row[1] !=''){
+ header('Location:../dashboard.php');
+}
+else
+    echo"nombre de usuario o contraseña equivocados";
+
 ?>
