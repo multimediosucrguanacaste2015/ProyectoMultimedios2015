@@ -34,7 +34,7 @@
         <div class="row">
             <div class="col-md-1 col-md-offset-1"></div>
             <div class="col-md-6">
-                <form action="../mod/agregarEstudiante.php" method="post">
+                <form action="mod/agregarEstudiante.php" method="post">
                     <div class="form-group">
                         <div class="input-group">
                             <label for="Nombre" class="input-group-addon">Nombre</label>
