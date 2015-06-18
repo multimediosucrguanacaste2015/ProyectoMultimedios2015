@@ -34,7 +34,7 @@
         <div class="row">
             <div class="col-md-1 col-md-offset-1"></div>
             <div class="col-md-6">
-                <form action="inserta.php" method="post">
+                <form action="../mod/agregarEstudiante.php" method="post">
                     <div class="form-group">
                         <div class="input-group">
                             <label for="Nombre" class="input-group-addon">Nombre</label>
@@ -44,14 +44,14 @@
                     <div class="form-group">
                         <div class="input-group">
                             <label for="Apellido" class="input-group-addon">Primer Apellido</label>
-                            <input type="text" class="form-control" id="Apellido1" name="Apellido1" placeholder="Centeno">
+                            <input type="text" class="form-control" id="Apellido1" name="apellido1" placeholder="Centeno">
                         </div>
 
                     </div>
                     <div class="form-group">
                         <div class="input-group">
                             <label for="Apellido2" class="input-group-addon">Segundo Apellido</label>
-                            <input type="text" class="form-control" id="Apellido2" name="Apellido2" placeholder="Gómez">
+                            <input type="text" class="form-control" id="Apellido2" name="apellido2" placeholder="Gómez">
                         </div>
 
                     </div>
@@ -78,17 +78,17 @@
                     </div>
                     <div class="radio">
                         <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> Masculino
+                            <input type="radio" class="radio" name="sexo" id="optionsRadios1" value="option1" checked> Masculino
                         </label>
                     </div>
                     <div class="radio">
                         <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> Femenino
+                            <input type="radio" class="radio" name="sexo" id="optionsRadios1" value="option1" unchecked> Femenino
                         </label>
                     </div>
                     <div class="form-group">
                         <label for="dirección"></label>
-                        <textarea class="form-control" name="dirección" id="" cols="30" rows="3">150 mts oeste de pinturas protecto</textarea>
+                        <textarea class="form-control" name="direccion" id="" cols="30" rows="3">150 mts oeste de pinturas protecto</textarea>
                     </div>
 
                     <button class="btn btn-default" type="submit">Enviar</button>
