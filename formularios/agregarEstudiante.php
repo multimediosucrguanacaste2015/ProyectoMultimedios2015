@@ -78,17 +78,17 @@
                     </div>
                     <div class="radio">
                         <label>
-                            <input type="radio" class="radio" name="sexo" id="optionsRadios1" value="option1" checked> Masculino
+                            <input type="radio" class="radio" name="sexo" id="sexo" value="Masculino" checked> Masculino
                         </label>
                     </div>
                     <div class="radio">
                         <label>
-                            <input type="radio" class="radio" name="sexo" id="optionsRadios1" value="option1" unchecked> Femenino
+                            <input type="radio" class="radio" name="sexo" id="sexo" value="Femenino" unchecked> Femenino
                         </label>
                     </div>
                     <div class="form-group">
                         <label for="dirección"></label>
-                        <textarea class="form-control" name="direccion" id="" cols="30" rows="3">150 mts oeste de pinturas protecto</textarea>
+                        <textarea class="form-control" name="direccion" id="direccion" cols="30" rows="3">150 mts oeste de pinturas protecto</textarea>
                     </div>
 
                     <button class="btn btn-default" type="submit">Enviar</button>
