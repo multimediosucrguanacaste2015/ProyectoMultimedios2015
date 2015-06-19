@@ -34,17 +34,6 @@
         <div class="row">
             <div class="col-md-2">
                 <ul class="nav nav-pills navbar nav-stacked span3">
-                    <!-- <li id="accordion"><a href="#"><span class="glyphicon glyphicon-user"></span> Estudiantes</a>
-                        </li>
-                        <li><a href="#"><span class="glyphicon glyphicon-education"></span> Profesores</a>
-                        </li>
-                        <li><a href="#"><span class="glyphicon glyphicon-book"></span> Cursos</a>
-                        </li>
-                        <li><a href="#"><span class="glyphicon glyphicon-list-alt"></span> Notas</a>
-                        </li>
-                        <li><a href="#"><span class="glyphicon glyphicon-file"></span> Reportes</a>
-                        </li>-->
-                    <!--                        Sección estudiantes-->
                     <li id="accordion">
                         <a data-toggle="collapse" data-parent="#accordion" href="#section1"><span class="glyphicon glyphicon-user"></span>  Estudiantes</a>
                     </li>
@@ -74,21 +63,23 @@
                     </div>
                     <!--                        Sección cursos-->
                     <li id="accordion3">
-                        <a data-toggle="collapse" data-parent="#accordion3" href="#section3"><span class="glyphicon glyphicon-book"></span>  Cursos</a>
+                        <a data-toggle="collapse" data-parent="#accordion3" href="#section3"><span class="glyphicon glyphicon-book"></span>  Nivel</a>
                     </li>
                     <div id="section3" class="collapse collapse-in">
                         <ul class="nav nav-pills nav-stacked span3">
-                            <li><a href="">Agregar</a>
+                            <li><a href="">Grado</a>
                             </li>
-                            <li><a href="">Modificar</a>
+                            <li><a href="">Seccion</a>
                             </li>
-                            <li><a href="">Borrar</a>
+                            <li><a href="">Curso</a>
+                            </li>
+                            <li><a href="">Notas</a>
                             </li>
                         </ul>
                     </div>
                 <!--     Sección Notas-->
                     <li id="accordion4">
-                        <a data-toggle="collapse" data-parent="#accordion4" href="#section4"><span class="glyphicon glyphicon-list-alt"></span>  Notas</a>
+                        <a data-toggle="collapse" data-parent="#accordion4" href="#section4"><span class="glyphicon glyphicon-list-alt"></span>  Matricula</a>
                     </li>
                     <div id="section4" class="collapse collapse-in">
                         <ul class="nav nav-pills nav-stacked span3">
