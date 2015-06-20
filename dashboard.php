@@ -12,16 +12,7 @@
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/menu.js"></script>
-    <style>
-        body {
-            padding-top: 50px;
-        }
 
-        .starter-template {
-            padding: 40px 15px;
-            text-align: center;
-        }
-    </style>
 
     <!--[if IE]>
         <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -93,7 +84,7 @@
                     </div>
                <!--     Sección Reportes-->
                    <li id="accordion5">
-                        <a data-toggle="collapse" data-parent="#accordion2" href="#section5"><span class="glyphicon glyphicon-file"></span>  Reportes</a>
+                        <a data-toggle="collapse" data-parent="#accordion5" href="#section5"><span class="glyphicon glyphicon-file"></span>  Reportes</a>
                     </li>
                     <div id="section5" class="collapse collapse-in">
                         <ul class="nav nav-pills nav-stacked span3">
