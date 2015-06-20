@@ -18,6 +18,16 @@
         <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+        body {
+            padding-top: 50px;
+        }
+
+        .starter-template {
+            padding: 40px 15px;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -30,7 +40,7 @@
                     </li>
                     <div id="section1" class="collapse collapse-in">
                         <ul class="nav nav-pills nav-stacked span3">
-                            <li class="submenu"><a id="agregarEstudiante"  href="#"><span class="glyphicon glyphicon-plus"></span> Agregar</a>
+                            <li class="submenu"><a id="agregarEstudiante" href="#"><span class="glyphicon glyphicon-plus"></span> Agregar</a>
                             </li>
                             <li><a href="">Modificar</a>
                             </li>
@@ -68,7 +78,7 @@
                             </li>
                         </ul>
                     </div>
-                <!--     Sección Notas-->
+                    <!--     Sección Notas-->
                     <li id="accordion4">
                         <a data-toggle="collapse" data-parent="#accordion4" href="#section4"><span class="glyphicon glyphicon-list-alt"></span>  Matricula</a>
                     </li>
@@ -82,8 +92,8 @@
                             </li>
                         </ul>
                     </div>
-               <!--     Sección Reportes-->
-                   <li id="accordion5">
+                    <!--     Sección Reportes-->
+                    <li id="accordion5">
                         <a data-toggle="collapse" data-parent="#accordion5" href="#section5"><span class="glyphicon glyphicon-file"></span>  Reportes</a>
                     </li>
                     <div id="section5" class="collapse collapse-in">
@@ -102,19 +112,19 @@
 
             </div>
             <div class="col-md-10">
-               <div>
-                   <div class="panel panel-default">
-                       <div class="panel-heading">Panel Principal</div>
-                       <div  id="contenido" class="panel-body">
-                          <div class="texto">
-                            <img class="img-responsive"  src="img/checking1.svg" alt="">
-                            <h1>Bienvenido al sistema de control de estudiantes</h1>
-                            <p> El sistema le permitirá gestionar los estudiantes, sus cursos y notas asociadas, así como también los profesores asignados a cada curso y los respectivos niveles en los cuales se imparten.</p>
-                          </div>
+                <div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Panel Principal</div>
+                        <div id="contenido" class="panel-body">
+                            <div class="texto">
+                                <img class="img-responsive" src="img/checking1.svg" alt="">
+                                <h1>Bienvenido al sistema de control de estudiantes</h1>
+                                <p> El sistema le permitirá gestionar los estudiantes, sus cursos y notas asociadas, así como también los profesores asignados a cada curso y los respectivos niveles en los cuales se imparten.</p>
+                            </div>
 
-                       </div>
-                   </div>
-               </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -124,13 +134,13 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    		<script type="text/javascript">
-			$(document).ready(function() {
-				$("#agregarEstudiante").click(function(event) {
-					$("#contenido").load('formularios/agregarEstudiante.php');
-				});
-			});
-		</script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#agregarEstudiante").click(function (event) {
+                $("#contenido").load('formularios/agregarEstudiante.php');
+            });
+        });
+    </script>
 </body>
 
 </html>

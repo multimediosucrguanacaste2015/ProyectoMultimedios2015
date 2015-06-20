@@ -34,11 +34,12 @@
         <div class="row">
             <div class="col-md-1 col-md-offset-1"></div>
             <div class="col-md-9">
-                <form action="mod/agregarEstudiante.php" method="post">
+                <form action="./mod/agregarEstudiante.php" method="post" id="form-agregar-estudiante">
                     <div class="panel-group" id="acordion">
                         <div class="panel panel-default">
                             <!--Estudiante-->
-                            <div class="panel-heading"><h4 class="panel-title">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
                                 <a data-toggle="collapse" data-parent="#acordion" href="#datos-estudiante">Datos de estudiante</a>
                             </h4>
                             </div>
@@ -108,7 +109,8 @@
                     <!--Datos del padre-->
                     <div class="panel-group" id="acordion2">
                         <div class="panel panel-default">
-                            <div class="panel-heading"><h4 class="panel-title">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
                                 <a data-toggle="collapse" data-parent="#acordion2" href="#datos-padre">Datos del padre</a>
                             </h4>
                             </div>
@@ -141,7 +143,7 @@
                                         </div>
 
                                     </div>
-<!--                                    <div class="form-group">
+                                    <!--                                    <div class="form-group">
                                         <div class="input-group">
                                             <label for="carnet" class="input-group-addon">Carnet</label>
                                             <input type="text" class="form-control" id="carnet" name="carnet" placeholder="A9999">
@@ -165,7 +167,7 @@
                                             <input type="radio" class="radio" name="sexoPadre" id="sexo" value="Femenino" unchecked> Femenino
                                         </label>
                                     </div>
-                                  <!--  <div class="form-group">
+                                    <!--  <div class="form-group">
                                         <label for="dirección"></label>
                                         <textarea class="form-control" name="direccion" id="direccion" cols="30" rows="3">150 mts oeste de pinturas protecto</textarea>
                                     </div>-->
@@ -180,11 +182,22 @@
             </div>
         </div>
     </div>
-
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+  <!--  <script>
+        $(document).ready(function () {
+            $('#form-agregar-estudiante').submit(function (e) {
+                e.preventDefault();
+                $.ajax({
+                    type: 'POST',
+                    url: '../mod/agregarEstudiante.php',
+                    data: $(this).serializeArray(),
+                    dataType: "html",
+                    success: function () {}
+                });
+            });
+        });
+    </script>-->
 </body>
 
 </html>
