@@ -68,7 +68,7 @@
                     </li>
                     <div id="section3" class="collapse collapse-in">
                         <ul class="nav nav-pills nav-stacked span3">
-                            <li><a href="">Grado</a>
+                            <li><a href="#" id="agregarGrado">Grado</a>
                             </li>
                             <li><a href="">Seccion</a>
                             </li>
@@ -138,6 +138,9 @@
         $(document).ready(function () {
             $("#agregarEstudiante").click(function (event) {
                 $("#contenido").load('formularios/agregarEstudiante.php');
+            });
+            $("#agregarGrado").click(function (event) {
+                $("#contenido").load('formularios/nivel.php');
             });
         });
     </script>
