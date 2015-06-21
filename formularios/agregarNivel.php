@@ -45,11 +45,11 @@
                                 <div class="input-group">
                                     <label for="nivel" class="input-group-addon">Nivel</label>
                                     <select name="nivel" id="" class="form-control">
-                                        <option value="Sétimo">Sétimo</option>
+                                        <option value="Setimo">Sétimo</option>
                                         <option value="Octavo">Octavo</option>
                                         <option value="Noveno">Noveno</option>
-                                        <option value="Décimo">Décimo</option>
-                                        <option value="Undécimo">Undécimo</option>
+                                        <option value="Decimo">Décimo</option>
+                                        <option value="Undecimo">Undécimo</option>
                                     </select>
                                 </div>
                             </div>
