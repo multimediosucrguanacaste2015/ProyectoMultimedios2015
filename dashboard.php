@@ -140,7 +140,7 @@
                 $("#contenido").load('formularios/agregarEstudiante.php');
             });
             $("#agregarGrado").click(function (event) {
-                $("#contenido").load('formularios/nivel.php');
+                $("#contenido").load('formularios/agregarNivel.php');
             });
         });
     </script>

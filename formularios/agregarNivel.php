@@ -40,16 +40,16 @@
                        </h4>
                     </div>
                     <div class="panel-body">
-                        <form action="" method="post">
+                        <form action="./mod/agregarNivel.php" method="post">
                             <div class="form-group">
                                 <div class="input-group">
                                     <label for="nivel" class="input-group-addon">Nivel</label>
                                     <select name="nivel" id="" class="form-control">
-                                        <option value="">Sétimo</option>
-                                        <option value="">Octavo</option>
-                                        <option value="">Noveno</option>
-                                        <option value="">Décimo</option>
-                                        <option value="">Undécimo</option>
+                                        <option value="Sétimo">Sétimo</option>
+                                        <option value="Octavo">Octavo</option>
+                                        <option value="Noveno">Noveno</option>
+                                        <option value="Décimo">Décimo</option>
+                                        <option value="Undécimo">Undécimo</option>
                                     </select>
                                 </div>
                             </div>
