@@ -40,7 +40,7 @@
                        </h4>
                     </div>
                     <div class="panel-body">
-                        <form action="./mod/agregarNivel.php" method="post">
+                       <!-- <form action="./mod/agregarNivel.php" method="post">
                             <div class="form-group">
                                 <div class="input-group">
                                     <label for="nivel" class="input-group-addon">Nivel</label>
@@ -59,14 +59,44 @@
                                     <input type="text" name="seccion" class="form-control" required placeholder="ej:7-1">
                                 </div>
                             </div>
-                            <!--   <div class="form-group">
+                               <div class="form-group">
                                 <div class="input-group">
                                     <label for="curso" class="input-group-addon">Curso</label>
                                     <input type="text" name="curso" class="form-control" placeholder="ej:Matemática">
                                 </div>
-                            </div>-->
+                            </div>
                             <button class="btn btn-default" type="submit">Enviar</button>
-                        </form>
+                        </form>-->
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Descripción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                   /* $link = mysql_connect('localhost','root','') or die ('no se pudo conectar' . mysql_error());*/
+                                    $conn = mysqli_connect("localhost", "root", "","multimediosdb2") or die (mysql_error ());
+                                   /* mysql_select_db('multimediosdb2') or die('no se pudo conectar con la base de datos');*/
+
+                                    // seleccionar tabla nivel y mostrarla
+                                    $consultaNivel = "SELECT Id, Descripcion From multimediosdb2.Niveles";
+                                        $resultadoNivel = mysqli_query($conn, $consultaNivel) or die('Error en la consulta' . mysql_error());
+                                    if (mysqli_num_rows($resultadoNivel) > 0){
+                                        while ($columna = mysqli_fetch_row($resultadoNivel)){
+                                         echo"
+                                         <tr>
+                                            <td>$columna[0]</td>
+                                            <td>$columna[1]</td>
+                                         </tr>";
+
+                                        }
+                                    }
+                                ?>
+                            </tbody>
+                        </table>
+
                     </div>
                 </div>
 
