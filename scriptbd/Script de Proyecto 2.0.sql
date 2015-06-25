@@ -115,24 +115,41 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
+-- Table `multimediosdb2`.`Secciones`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `multimediosdb2`.`Secciones` (
+  `Id` INT NOT NULL AUTO_INCREMENT ,
+  `Seccion_Numero` VARCHAR(45) NOT NULL ,
+  `Niveles_Id` INT NOT NULL ,
+  PRIMARY KEY (`Id`) ,
+  INDEX `fk_Secciones_Niveles1_idx` (`Niveles_Id` ASC) ,
+  CONSTRAINT `fk_Secciones_Niveles1`
+    FOREIGN KEY (`Niveles_Id` )
+    REFERENCES `multimediosdb2`.`Niveles` (`Id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Table `multimediosdb2`.`Estudiantes_Matriculados`
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `multimediosdb2`.`Estudiantes_Matriculados` (
   `Id` INT NOT NULL AUTO_INCREMENT ,
   `Año` INT NOT NULL ,
   `Estudiantes_Id` INT NULL ,
-  `Niveles_Id` INT NULL ,
+  `Secciones_Id` INT NOT NULL ,
   PRIMARY KEY (`Id`) ,
   INDEX `fk_Estudiantes_Matriculados_Estudiantes_idx` (`Estudiantes_Id` ASC) ,
-  INDEX `fk_Estudiantes_Matriculados_Niveles1_idx` (`Niveles_Id` ASC) ,
+  INDEX `fk_Estudiantes_Matriculados_Secciones1_idx` (`Secciones_Id` ASC) ,
   CONSTRAINT `fk_Estudiantes_Matriculados_Estudiantes`
     FOREIGN KEY (`Estudiantes_Id` )
     REFERENCES `multimediosdb2`.`Estudiantes` (`Id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Estudiantes_Matriculados_Niveles1`
-    FOREIGN KEY (`Niveles_Id` )
-    REFERENCES `multimediosdb2`.`Niveles` (`Id` )
+  CONSTRAINT `fk_Estudiantes_Matriculados_Secciones1`
+    FOREIGN KEY (`Secciones_Id` )
+    REFERENCES `multimediosdb2`.`Secciones` (`Id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -201,23 +218,6 @@ CREATE  TABLE IF NOT EXISTS `multimediosdb2`.`Usuarios` (
   `Apellido2` VARCHAR(45) NOT NULL ,
   `Tipo` VARCHAR(45) NOT NULL ,
   PRIMARY KEY (`Id`) )
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `multimediosdb2`.`Secciones`
--- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `multimediosdb2`.`Secciones` (
-  `Id` INT NOT NULL AUTO_INCREMENT ,
-  `Seccion_Numero` VARCHAR(45) NOT NULL ,
-  `Niveles_Id` INT NOT NULL ,
-  PRIMARY KEY (`Id`) ,
-  INDEX `fk_Secciones_Niveles1_idx` (`Niveles_Id` ASC) ,
-  CONSTRAINT `fk_Secciones_Niveles1`
-    FOREIGN KEY (`Niveles_Id` )
-    REFERENCES `multimediosdb2`.`Niveles` (`Id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 USE `multimediosdb2` ;
