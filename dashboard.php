@@ -68,14 +68,14 @@
                     </li>
                     <div id="section3" class="collapse collapse-in">
                         <ul class="nav nav-pills nav-stacked span3">
-                            <li><a href="#" id="agregarGrado">Grado</a>
+                            <li><a href="#" id="agregarGrado">Agregar nivel</a>
                             </li>
-                            <li><a href="">Seccion</a>
+                            <!--<li><a href="">Seccion</a>
+                            </li>-->
+                            <li><a href="#" id="agregarCurso">Agregar Curso</a>
                             </li>
-                            <li><a href="">Curso</a>
-                            </li>
-                            <li><a href="">Notas</a>
-                            </li>
+                            <!--<li><a href="">Notas</a>
+                            </li>-->
                         </ul>
                     </div>
                     <!--     Sección Notas-->
@@ -141,6 +141,9 @@
             });
             $("#agregarGrado").click(function (event) {
                 $("#contenido").load('formularios/agregarNivel.php');
+            });
+            $("#agregarCurso").click(function (event) {
+                $("#contenido").load('formularios/agregarCurso.php');
             });
         });
     </script>

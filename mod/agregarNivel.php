@@ -17,10 +17,61 @@ $consulta0 = "SELECT * FROM proyectomultimedios.grado";
         $resultado = mysql_query($consulta) or die('Error en la consulta' . mysql_error());
 
     }
-// Inserción de datos en tabla sección
-    $consulta2 = "INSERT INTO proyectomultimedios.seccion(nombre)
-    VALUES('$seccion')";
-    $resultado2 = mysql_query($consulta2) or die('Error en la consulta' . mysql_error());
+    // Los grados en un colegio son solamente 5.
+    switch($nivel){
+        case "Setimo":
+            // Inserción de datos en tabla sección
+        $consultaSeccion = "INSERT INTO proyectomultimedios.seccion(nombre, grado_idgrado)
+        VALUES('$seccion', '1');";
+        $resultadoSeccion = mysql_query($consultaSeccion) or die('Error en la consulta' . mysql_error());
+            // Inserción de datos en tabla curso
+        $consultaCurso = "INSERT INTO proyectomultimedios.curso(nombre_curso, grado_idgrado)
+            VALUES('$curso', '1');";
+        $resultadoCurso = mysql_query($consultaCurso) or die('Error en consulta curso'. mysql_error());
+            break;
+        case "Octavo":
+          // Inserción de datos en tabla sección
+        $consultaSeccion = "INSERT INTO proyectomultimedios.seccion(nombre, grado_idgrado)
+        VALUES('$seccion', '2');";
+        $resultadoSeccion = mysql_query($consultaSeccion) or die('Error en la consulta' . mysql_error());
+            // Inserción de datos en tabla curso
+        $consultaCurso = "INSERT INTO proyectomultimedios.curso(nombre_curso, grado_idgrado)
+            VALUES('$curso', '2');";
+        $resultadoCurso = mysql_query($consultaCurso) or die('Error en consulta curso'. mysql_error());
+            break;
+        case "Noveno":
+          // Inserción de datos en tabla sección
+        $consultaSeccion = "INSERT INTO proyectomultimedios.seccion(nombre, grado_idgrado)
+        VALUES('$seccion', '3');";
+        $resultadoSeccion = mysql_query($consultaSeccion) or die('Error en la consulta' . mysql_error());
+            // Inserción de datos en tabla curso
+        $consultaCurso = "INSERT INTO proyectomultimedios.curso(nombre_curso, grado_idgrado)
+            VALUES('$curso', '3');";
+        $resultadoCurso = mysql_query($consultaCurso) or die('Error en consulta curso'. mysql_error());
+            break;
+        case "Decimo":
+          // Inserción de datos en tabla sección
+        $consultaSeccion = "INSERT INTO proyectomultimedios.seccion(nombre, grado_idgrado)
+        VALUES('$seccion', '4');";
+        $resultadoSeccion = mysql_query($consultaSeccion) or die('Error en la consulta' . mysql_error());
+            // Inserción de datos en tabla curso
+        $consultaCurso = "INSERT INTO proyectomultimedios.curso(nombre_curso, grado_idgrado)
+            VALUES('$curso', '4');";
+        $resultadoCurso = mysql_query($consultaCurso) or die('Error en consulta curso'. mysql_error());
+            break;
+        case "Undecimo":
+          // Inserción de datos en tabla sección
+        $consultaSeccion = "INSERT INTO proyectomultimedios.seccion(nombre, grado_idgrado)
+        VALUES('$seccion', '5');";
+        $resultadoSeccion = mysql_query($consultaSeccion) or die('Error en la consulta' . mysql_error());
+            // Inserción de datos en tabla curso
+        $consultaCurso = "INSERT INTO proyectomultimedios.curso(nombre_curso, grado_idgrado)
+            VALUES('$curso', '5');";
+        $resultadoCurso = mysql_query($consultaCurso) or die('Error en consulta curso'. mysql_error());
+            break;
+    }
+
+
 /*// Consulta que devuelve el idGrado, recien insertado
 $consulta = "SELECT idGrado from proyectomultimedios.grado
     WHERE ";

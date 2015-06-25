@@ -53,18 +53,12 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <label for="" class="input-group-addon">Sección</label>
-                                    <input type="text" name="seccion" class="form-control" required placeholder="ej:7-1">
-                                </div>
-                            </div>
-                            <!--   <div class="form-group">
+                               <div class="form-group">
                                 <div class="input-group">
                                     <label for="curso" class="input-group-addon">Curso</label>
                                     <input type="text" name="curso" class="form-control" placeholder="ej:Matemática">
                                 </div>
-                            </div>-->
+                            </div>
                             <button class="btn btn-default" type="submit">Enviar</button>
                         </form>
                     </div>
