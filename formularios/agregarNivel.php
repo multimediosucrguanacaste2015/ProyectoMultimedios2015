@@ -76,7 +76,7 @@
                                     <h4 class="modal-title">Agregar Niveles</h4>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="">
+                                    <form class="agregar-nivel">
                                         <div class="form-group">
                                             <div class="input-group">
                                                 <label for="description" class="input-group-addon">Descripcion</label>
@@ -87,11 +87,11 @@
                                     </form>
                                 </div>
                                 <div class="modal-footer">
-
+                                    <button class="btn btn-info" type="submit" id="submit">Enviar</button>
                                 </div>
                             </div>
                              </div>
-                           <button class="btn btn-info" type="submit">Enviar</button>
+
                         </div>
                         </div>
 
