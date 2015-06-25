@@ -67,6 +67,35 @@
                             </div>
                             <button class="btn btn-default" type="submit">Enviar</button>
                         </form>-->
+                        <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#agregarNivelModal"> Agregar</span></a>
+                        <div class="container">
+                             <div class="modal fade" id="agregarNivelModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                             <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Agregar Niveles</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <label for="description" class="input-group-addon">Descripcion</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+
+                                </div>
+                            </div>
+                             </div>
+                           <button class="btn btn-info" type="submit">Enviar</button>
+                        </div>
+                        </div>
+
+
                         <table class="table table-hover">
                             <thead>
                                 <tr>
