@@ -8,6 +8,7 @@ mysql_select_db('proyectomultimedios')
     or die('no se pudo conectar con la base de datos');
 
 $agregarNivel = "INSERT INTO multimediosdb2.Niveles (Descripcion)
-VALUES ($descripcion)";
+VALUES ('$descripcion')";
 mysql_query($agregarNivel);
+mysql_query($agregarNivel) or die("Error insertanto nivel " . mysql_error());
 ?>
