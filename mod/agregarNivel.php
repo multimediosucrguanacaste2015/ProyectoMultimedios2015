@@ -4,7 +4,7 @@
 
 $link = mysql_connect('localhost','root','')
     or die ('no se pudo conectar' . mysql_error());
-mysql_select_db('proyectomultimedios')
+mysql_select_db('multimediosdb2')
     or die('no se pudo conectar con la base de datos');
 
 $agregarNivel = "INSERT INTO multimediosdb2.Niveles (Descripcion)
