@@ -68,6 +68,7 @@
                             <button class="btn btn-default" type="submit">Enviar</button>
                         </form>-->
                         <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#agregarNivelModal"> Agregar</span></a>
+                        <button href="#" class="btn btn-info" id="btn-refrescar"><span class="glyphicon glyphicon-refresh"> Refrescar</span></button>
                         <div class="container">
                              <div class="modal fade" id="agregarNivelModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                              <div class="modal-dialog" role="document">
@@ -93,9 +94,8 @@
 
                         </div>
                         </div>
-
-
-                        <table class="table table-hover">
+                        <div id="tabla">
+                             <table class="table table-hover">
                             <thead>
                                 <tr>
                                     <th>Id</th>
@@ -124,6 +124,9 @@
                                 ?>
                             </tbody>
                         </table>
+                        </div>
+
+
 
                     </div>
                 </div>
@@ -153,6 +156,27 @@
             });
         });
     });
+
+    $(document).ready(function() {
+
+    $("button#btn-refrescar").click(function() {
+
+      $.ajax({    //create an ajax request to load_page.php
+        type: "GET",
+        url: "./mod/listarNivel.php",
+        dataType: "html",   //expect html to be returned
+        success: function(response){
+            $("#tabla").html(response);
+            //alert(response);
+        },
+          error: function(){
+              alert("error!!");
+          }
+
+    });
+});
+});
+
     </script>
 </body>
 
