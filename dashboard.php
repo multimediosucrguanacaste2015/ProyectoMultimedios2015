@@ -62,13 +62,13 @@
                             </li>
                         </ul>
                     </div>
-                    <!--                        Sección cursos-->
+                    <!--                        Sección Niveles-->
                     <li id="accordion3">
                         <a data-toggle="collapse" data-parent="#accordion3" href="#section3"><span class="glyphicon glyphicon-book"></span>  Nivel</a>
                     </li>
-                    <div id="section3" class="collapse collapse-in">
+                    <div id="section3" class="collapse collapse">
                         <ul class="nav nav-pills nav-stacked span3">
-                            <li><a href="#" id="agregarGrado">Agregar nivel</a>
+                            <li><a id="agregarGrado" href="#">Agregar nivel</a>
                             </li>
                             <!--<li><a href="">Seccion</a>
                             </li>-->
@@ -84,11 +84,11 @@
                     </li>
                     <div id="section4" class="collapse collapse-in">
                         <ul class="nav nav-pills nav-stacked span3">
-                            <li><a href="">Agregar</a>
+                            <li><a href="#">Agregar</a>
                             </li>
-                            <li><a href="">Modificar</a>
+                            <li><a href="#">Modificar</a>
                             </li>
-                            <li><a href="">Borrar</a>
+                            <li><a href="#">Borrar</a>
                             </li>
                         </ul>
                     </div>
