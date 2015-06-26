@@ -9,7 +9,7 @@ $conn = mysqli_connect('localhost', 'root', '','multimediosdb2') or die (mysql_e
 
             $consultaNivel = "SELECT Id, Descripcion From multimediosdb2.Niveles";
             $resultadoNivel = mysqli_query($conn, $consultaNivel) or die('Error en la consulta' . mysql_error());
- echo"  <table class=\"table table-hover\">
+ echo"<table class=\"table table-hover\">
                     <thead>
                         <tr>
                             <th>Id</th>
@@ -32,8 +32,7 @@ $conn = mysqli_connect('localhost', 'root', '','multimediosdb2') or die (mysql_e
         }
 
     }
-  echo"
-            </table>";
+  echo"</table>";
 
 
 ?>
