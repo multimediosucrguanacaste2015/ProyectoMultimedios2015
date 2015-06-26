@@ -3,8 +3,7 @@
 }
 
 body {
-    background-image: url("img/dark-grey-tile.png");
-    background-repeat: repeat-x;
+  background-color: #242424;
 }
 
 a {
