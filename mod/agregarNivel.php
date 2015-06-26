@@ -9,6 +9,5 @@ mysql_select_db('proyectomultimedios')
 
 $agregarNivel = "INSERT INTO multimediosdb2.Niveles (Descripcion)
 VALUES ('$descripcion')";
-mysql_query($agregarNivel);
 mysql_query($agregarNivel) or die("Error insertanto nivel " . mysql_error());
 ?>
