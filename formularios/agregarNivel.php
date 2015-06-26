@@ -76,10 +76,10 @@
                                     <h4 class="modal-title">Agregar Niveles</h4>
                                 </div>
                                 <div class="modal-body">
-                                    <form class="agregar-nivel" action="./mod/agregarNivel.php">
+                                    <form class="agregar-nivel" action="./mod/agregarNivel.php" method="post">
                                         <div class="form-group">
                                             <div class="input-group">
-                                                <label for="description" class="input-group-addon">Descripcion</label>
+                                                <label for="descripcion" class="input-group-addon">Descripcion</label>
                                                 <input type="text" class="form-control" name="descripcion" id="descripcion">
                                             </div>
                                         </div>
