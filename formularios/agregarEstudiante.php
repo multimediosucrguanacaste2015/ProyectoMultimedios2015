@@ -122,22 +122,42 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script>
-        $(function () {
-        $("button#submit").click(function () {
-            $.ajax({
-                type: "POST",
-                url: "./mod/agregarEstudiante.php",
-                data: $('form.agregar-nivel').serialize(),
-                /*success: function (msg) {
-                    $("#thanks").html(msg)
-                    $("#agregarNivelModal").modal('hide');
-                },
-                error: function () {
-                    alert("failure");
-                }*/
+        $(function() {
+            $("button#submit").click(function() {
+                $.ajax({
+                    type: "POST",
+                    url: "./mod/agregarEstudiante.php",
+                    data: $('form.agregar-nivel').serialize(),
+                    /*success: function (msg) {
+                        $("#thanks").html(msg)
+                        $("#agregarNivelModal").modal('hide');
+                    },
+                    error: function () {
+                        alert("failure");
+                    }*/
+                });
             });
         });
-    });
+            /*Refrescar el contenido de la tabla*/
+        $(document).ready(function() {
+
+            $("button#btn-refrescar").click(function() {
+
+                $.ajax({ //create an ajax request to load_page.php
+                    type: "GET",
+                    url: "./mod/listarEstudiante.php",
+                    dataType: "html", //expect html to be returned
+                    success: function(response) {
+                        $("#tabla").html(response);
+                        //alert(response);
+                    },
+                    error: function() {
+                        alert("error!!");
+                    }
+
+                });
+            });
+        });
     </script>
     <!--  <script>
         $(document).ready(function () {
