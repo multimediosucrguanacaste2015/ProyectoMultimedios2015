@@ -21,8 +21,8 @@ $conn = mysqli_connect('localhost', 'root', '','multimediosdb2') or die (mysql_e
                             <th>Dirección</th>
                         </tr>
                 </thead> ";
-    if(mysqli_num_rows ($resultadoNivel) > 0){
-        while ($columna = mysqli_fetch_row($resultadoNivel)){
+    if(mysqli_num_rows ($resultadoEstudiante) > 0){
+        while ($columna = mysqli_fetch_row($resultadoEstudiante)){
 
 
             echo"
