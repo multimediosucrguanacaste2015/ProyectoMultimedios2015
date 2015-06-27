@@ -40,33 +40,6 @@
                        </h4>
                     </div>
                     <div class="panel-body">
-                       <!-- <form action="./mod/agregarNivel.php" method="post">
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <label for="nivel" class="input-group-addon">Nivel</label>
-                                    <select name="nivel" id="" class="form-control">
-                                        <option value="Setimo">Sétimo</option>
-                                        <option value="Octavo">Octavo</option>
-                                        <option value="Noveno">Noveno</option>
-                                        <option value="Decimo">Décimo</option>
-                                        <option value="Undecimo">Undécimo</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <label for="" class="input-group-addon">Sección</label>
-                                    <input type="text" name="seccion" class="form-control" required placeholder="ej:7-1">
-                                </div>
-                            </div>
-                               <div class="form-group">
-                                <div class="input-group">
-                                    <label for="curso" class="input-group-addon">Curso</label>
-                                    <input type="text" name="curso" class="form-control" placeholder="ej:Matemática">
-                                </div>
-                            </div>
-                            <button class="btn btn-default" type="submit">Enviar</button>
-                        </form>-->
                         <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#agregarNivelModal"> Agregar</span></a>
                         <button href="#" class="btn btn-info" id="btn-refrescar"><span class="glyphicon glyphicon-refresh"> Refrescar</span></button>
                         <div class="container">
