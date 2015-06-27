@@ -121,6 +121,24 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+        $("button#submit").click(function () {
+            $.ajax({
+                type: "POST",
+                url: "./mod/agregarEstudiante.php",
+                data: $('form.agregar-nivel').serialize(),
+                /*success: function (msg) {
+                    $("#thanks").html(msg)
+                    $("#agregarNivelModal").modal('hide');
+                },
+                error: function () {
+                    alert("failure");
+                }*/
+            });
+        });
+    });
+    </script>
     <!--  <script>
         $(document).ready(function () {
             $('#form-agregar-estudiante').submit(function (e) {
