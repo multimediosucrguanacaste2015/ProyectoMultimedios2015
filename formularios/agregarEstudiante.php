@@ -47,7 +47,7 @@
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h4 class="modal-title">Agregar Niveles</h4>
+                                            <h4 class="modal-title">Agregar Estudiante</h4>
                                         </div>
                                         <div class="modal-body">
 
