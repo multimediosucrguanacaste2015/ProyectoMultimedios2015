@@ -169,7 +169,7 @@
                 $.ajax({
                     type: "POST",
                     url: "./mod/agregarEstudiante.php",
-                    data: $('form.agregar-nivel').serialize(),
+                    data: $('form.agregar-estudiante').serialize(),
                     /*success: function (msg) {
                         $("#thanks").html(msg)
                         $("#agregarNivelModal").modal('hide');
