@@ -135,8 +135,8 @@
                                     // seleccionar tabla nivel y mostrarla
                                     $consultaEstudiante = "SELECT Id, Carnet, Nombre, Apellido1, Apellido2, FechaNacimiento, Sexo, Telefono, Direccion From multimediosdb2.Estudiantes";
                                     $resultadoEstudiante = mysqli_query($conn, $consultaEstudiante) or die('Error en la consulta' . mysql_error());
-                                    if (mysqli_num_rows($resultadoNivel) > 0){
-                                        while ($columna = mysqli_fetch_row($resultadoNivel)){
+                                    if (mysqli_num_rows($resultadoEstudiante) > 0){
+                                        while ($columna = mysqli_fetch_row($resultadoEstudiante)){
                                          echo"
                                          <tr>
                                             <td>$columna[0]</td>
