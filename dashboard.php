@@ -32,7 +32,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-2">
                 <ul class="nav nav-pills navbar nav-stacked span3">
