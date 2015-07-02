@@ -40,9 +40,9 @@
                     </div>
                     <div class="panel-body">
                         <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#agregarNivelModal"> Agregar</span></a>
-                        <button href="#" class="btn btn-info" id="btn-refrescar"><span class="glyphicon glyphicon-refresh"> Refrescar</span>
+                        <button href="#" class="btn btn-info" onclick="cargarTabla()" id="btn-refrescar"><span class="glyphicon glyphicon-refresh"> Refrescar</span>
                         </button>
-                        <div class="container">
+                        <div class="container-fluid">
                             <div class="modal fade" id="agregarNivelModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
@@ -102,7 +102,7 @@
                                                     <textarea class="form-control" name="direccion" id="" cols="10" rows="5">150 mts este del Banco Nacional de Costa Rica.</textarea>
 
                                                 </div>
-                                                <button class="btn btn-info" type="submit" id="submit" data-dismiss="modal">Enviar</button>
+                                                <button class="btn btn-info" onclick="refrescarDatos()" type="submit" id="submit" data-dismiss="modal">Enviar</button>
                                             </form>
                                         </div>
 
@@ -112,49 +112,7 @@
                             </div>
                         </div>
                         <div id="tabla">
-                            <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th>Id</th>
-                                    <th>Carnet</th>
-                                    <th>Nombre</th>
-                                    <th>P. Apellido</th>
-                                    <th>S. Apellido</th>
-                                    <th>F. Nacimiento</th>
-                                    <th>Sexo</th>
-                                    <th>Telefono</th>
-                                    <th>Dirección</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php
-                                   /* $link = mysql_connect('localhost','root','') or die ('no se pudo conectar' . mysql_error());*/
-                                    $conn = mysqli_connect("localhost", "root", "","multimediosdb2") or die (mysql_error ());
-                                   /* mysql_select_db('multimediosdb2') or die('no se pudo conectar con la base de datos');*/
 
-                                    // seleccionar tabla nivel y mostrarla
-                                    $consultaEstudiante = "SELECT Id, Carnet, Nombre, Apellido1, Apellido2, FechaNacimiento, Sexo, Telefono, Direccion From multimediosdb2.Estudiantes";
-                                    $resultadoEstudiante = mysqli_query($conn, $consultaEstudiante) or die('Error en la consulta' . mysql_error());
-                                    if (mysqli_num_rows($resultadoEstudiante) > 0){
-                                        while ($columna = mysqli_fetch_row($resultadoEstudiante)){
-                                         echo"
-                                         <tr>
-                                            <td>$columna[0]</td>
-                                            <td>$columna[1]</td>
-                                            <td>$columna[2]</td>
-                                            <td>$columna[3]</td>
-                                            <td>$columna[4]</td>
-                                            <td>$columna[5]</td>
-                                            <td>$columna[6]</td>
-                                            <td>$columna[7]</td>
-                                            <td>$columna[8]</td>
-                                         </tr>";
-
-                                        }
-                                    }
-                                ?>
-                            </tbody>
-                        </table>
                         </div>
                     </div>
                 </div>
@@ -164,28 +122,38 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script>
-        $(function() {
+       /* $(function() {
             $("button#submit").click(function() {
-                $.ajax({
-                    type: "POST",
-                    url: "./mod/agregarEstudiante.php",
-                    data: $('form.agregar-estudiante').serialize(),
-                    /*success: function (msg) {
-                        $("#thanks").html(msg)
-                        $("#agregarNivelModal").modal('hide');
-                    },
-                    error: function () {
-                        alert("failure");
-                    }*/
-                });
+
             });
-        });
+        });*/
             /*Refrescar el contenido de la tabla*/
         $(document).ready(function() {
 
             $("button#btn-refrescar").click(function() {
 
-                $.ajax({ //create an ajax request to load_page.php
+                /*$.ajax({ //create an ajax request to load_page.php
+                    type: "GET",
+                    url: "./mod/listarEstudiante.php",
+                    dataType: "html", //expect html to be returned
+                    success: function(response) {
+                        $("#tabla").html(response);
+                        //alert(response);
+                    },
+                    error: function() {
+                        alert("error!!");
+                    }
+
+                });*/
+            });
+        });
+        function refrescarDatos(){
+           $.ajax({
+                    type: "POST",
+                    url: "./mod/agregarEstudiante.php",
+                    data: $('form.agregar-estudiante').serialize(),
+                    success: function despues(){
+             $.ajax({ //create an ajax request to load_page.php
                     type: "GET",
                     url: "./mod/listarEstudiante.php",
                     dataType: "html", //expect html to be returned
@@ -198,8 +166,29 @@
                     }
 
                 });
-            });
-        });
+        },
+                    error: function () {
+                        alert("failure");
+                    }
+                });
+
+        }
+        function cargarTabla(){
+            $.ajax({ //create an ajax request to load_page.php
+                    type: "GET",
+                    url: "./mod/listarEstudiante.php",
+                    dataType: "html", //expect html to be returned
+                    success: function(response) {
+                        $("#tabla").html(response);
+                        //alert(response);
+                    },
+                    error: function() {
+                        alert("error!!");
+                    }
+
+                });
+        }
+
     </script>
     <!--  <script>
         $(document).ready(function () {
