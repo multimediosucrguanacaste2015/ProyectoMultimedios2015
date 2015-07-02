@@ -1,3 +1,9 @@
+<?php
+    if(isset($_SESSION['usuario'])){
+        echo "<script>location.href ='dashboard.php' </script>";
+    }
+    else{
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -41,27 +47,28 @@
                 <div class="panel panel-info">
                    <div class="panel-heading"><h4>Inicie sesión</h4></div>
                     <div class="panel-body">
-                        <form action="mod/login.php" method="post">
-                            <!-- input-group e input-group-addon, permiten añadir imagenes a los campos de texto.-->
+                        <form action="return false" method="post" onsubmit="return false">
+
+                            <div class="form-group">
+                                <div id="resultado"></div>
+                            </div>
                             <div class="form-group">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                    <input type="text" class="form-control" id="Nombre" name="usuario" placeholder="Usuario">
+                                    <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                    <input type="password" class="form-control" id="Apellido1" name="password" placeholder="Contraseña">
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña">
                                 </div>
                             </div>
 
-                            <button class="btn btn-me btn-block" type="submit">Acceder</button>
+                            <button class="btn btn-me btn-block" onclick="validar(document.getElementById('usuario').value, document.getElementById('password').value)" >Acceder</button>
                         </form>
                     </div>
                 </div>
-
-
             </div>
         </div>
 
@@ -71,6 +78,21 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        function validar(usuario, password){
+            $.ajax({
+                url: "mod/login.php",
+                type:"POST",
+                data:"usuario="+usuario+"&password="+password,
+                success: function(resp){
+                    $('#resultado').html(resp)
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>
+<?php
+}
+?>

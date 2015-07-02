@@ -76,22 +76,21 @@
                                     <h4 class="modal-title">Agregar Niveles</h4>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="">
+                                    <!--<form class="agregar-nivel" action="./mod/agregarNivel.php" method="post">-->
+                                    <form class="agregar-nivel">
                                         <div class="form-group">
                                             <div class="input-group">
-                                                <label for="description" class="input-group-addon">Descripcion</label>
-                                                <input type="text" class="form-control">
+                                                <label for="descripcion" class="input-group-addon">Descripcion</label>
+                                                <input type="text" class="form-control" name="descripcion" id="descripcion">
                                             </div>
                                         </div>
-
+                                        <button class="btn btn-info" type="submit" id="submit" data-dismiss="modal">Enviar</button>
                                     </form>
                                 </div>
-                                <div class="modal-footer">
 
-                                </div>
                             </div>
                              </div>
-                           <button class="btn btn-info" type="submit">Enviar</button>
+
                         </div>
                         </div>
 
@@ -136,6 +135,25 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        //twitter bootstrap script
+        $("button#submit").click(function () {
+            $.ajax({
+                type: "POST",
+                url: "./mod/agregarNivel.php",
+                data: $('form.agregar-nivel').serialize(),
+                /*success: function (msg) {
+                    $("#thanks").html(msg)
+                    $("#agregarNivelModal").modal('hide');
+                },
+                error: function () {
+                    alert("failure");
+                }*/
+            });
+        });
+    });
+    </script>
 </body>
 
 </html>
