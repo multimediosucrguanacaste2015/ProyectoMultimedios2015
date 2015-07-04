@@ -147,19 +147,7 @@
                 $("#contenido").load('formularios/agregarCurso.php');
             });
 
-             function agregarPadre(){
-               $.ajax({
-                    type: "POST",
-                    url: "./mod/agregarPadre.php",
-                    data: $('form.agregar-padre').serialize(),
-                    success: function(){
-                        alert("ss");
-                    } ,
-                    error: function () {
-                        alert("failure");
-                    }
-                });
-        }
+
 
         });
 
