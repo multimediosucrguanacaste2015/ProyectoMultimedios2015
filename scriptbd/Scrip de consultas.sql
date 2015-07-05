@@ -76,6 +76,12 @@ insert into Notas (Cotidiano, Parcial1, Parcial2, Final, Curso_Nivel_Id,
 values ('20', '20', '20', '20', '2', '3');
 
 
+$$
+-- Consultar lista de clases (Se pasa el Id de la seccion como parametro)
+SELECT * FROM Estudiantes
+WHERE Estudiantes.Id in (SELECT Estudiantes_Id FROM Estudiantes_Matriculados WHERE Secciones_Id = 2)
+
+
 
 
 
