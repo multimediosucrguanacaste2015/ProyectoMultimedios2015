@@ -146,7 +146,11 @@
             $("#agregarCurso").click(function (event) {
                 $("#contenido").load('formularios/agregarCurso.php');
             });
+
+
+
         });
+
     </script>
 </body>
 
