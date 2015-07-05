@@ -79,7 +79,22 @@ values ('20', '20', '20', '20', '2', '3');
 $$
 -- Consultar lista de clases (Se pasa el Id de la seccion como parametro)
 SELECT * FROM Estudiantes
-WHERE Estudiantes.Id in (SELECT Estudiantes_Id FROM Estudiantes_Matriculados WHERE Secciones_Id = 2)
+WHERE Estudiantes.Id in (SELECT Estudiantes_Id FROM Estudiantes_Matriculados WHERE Secciones_Id = 2);
+
+
+-- Reporte de notas al hogar (aqui hay pasar el identificador unico de cada estudiante osea carnet y no un
+-- Id como se encuentra aqui)
+SELECT Notas.Id, Notas.Cotidiano, Notas.Parcial1, Notas.Parcial2, Notas.Final, Notas.Curso_Nivel_Id, Notas.Estudiantes_Matriculados_Id, 
+Estudiantes_Matriculados.Id, Estudiantes_Matriculados.Año,
+Curso_Nivel_Profesor.Id,
+Estudiantes.Nombre, Estudiantes.Apellido1, Estudiantes.Apellido2,
+Cursos.Nombre
+FROM Notas JOIN 
+Estudiantes_Matriculados ON Notas.Estudiantes_Matriculados_Id = Estudiantes_Matriculados.Id
+JOIN Curso_Nivel_Profesor ON Notas.Curso_Nivel_Id = Curso_Nivel_Profesor.Id
+JOIN Estudiantes ON Estudiantes_Matriculados.Estudiantes_Id = Estudiantes.Id
+JOIN Cursos ON Curso_Nivel_Profesor.Cursos_Id = Cursos.Id
+WHERE Estudiantes_Matriculados_Id = 8
 
 
 
