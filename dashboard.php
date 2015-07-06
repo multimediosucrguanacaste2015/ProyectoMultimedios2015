@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+    session_start();
 
+        $sesion = $_SESSION["tipo"];
+    echo"$sesion";
+
+    ?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
