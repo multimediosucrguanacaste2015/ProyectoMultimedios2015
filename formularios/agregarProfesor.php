@@ -150,7 +150,7 @@
         function cargarTabla(){
             $.ajax({ //create an ajax request to load_page.php
                     type: "GET",
-                    url: "./mod/listarProfesor.php",
+                    url: "./mod/listarProfesores.php",
                     dataType: "html", //expect html to be returned
                     success: function(response) {
                         $("#tabla").html(response);

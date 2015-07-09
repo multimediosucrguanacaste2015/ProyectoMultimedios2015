@@ -4,7 +4,7 @@ $link = mysql_connect('localhost','root','')
 mysql_select_db('multimediosdb2')
     or die('no se pudo conectar con la base de datos');
 $conn = mysqli_connect('localhost', 'root', '','multimediosdb2') or die (mysql_error ());
-            $consultaEstudiante = "SELECT Cedula, Nombre, Apellido1, Apellido2 From multimediosdb2.Profesores";
+            $consultaEstudiante = "SELECT * From multimediosdb2.Profesores";
             $resultadoEstudiante = mysqli_query($conn, $consultaEstudiante) or die('Error en la consulta' . mysql_error());
 ?>
     <table class="table table-hover">
@@ -15,10 +15,8 @@ $conn = mysqli_connect('localhost', 'root', '','multimediosdb2') or die (mysql_e
                 <th>Nombre</th>
                 <th>P Apellido</th>
                 <th>S Apellido</th>
-               <!-- <th>F.Nacimiento</th>
-                <th>Sexo</th>
-                <th>Telefono</th>
-                <th>Dirección</th>-->
+                <th>Curso</th>
+
             </tr>
         </thead>
         <?php
@@ -39,14 +37,15 @@ $conn = mysqli_connect('localhost', 'root', '','multimediosdb2') or die (mysql_e
                     <td>
                         <?php echo"$columna[3]"?>
                     </td>
-                    <td>
+                       <td>
                         <?php echo"$columna[4]"?>
                     </td>
+                  <td>
 
 
-                        <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#profe<?php echo"$columna[0]"?>"></span></a>
+                        <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#curso<?php echo"$columna[0]"?>"></span></a>
                         <div class="container-fluid">
-                            <div class="modal fade " id="profe<?php echo" $columna[0] ";?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal fade " id="curso<?php echo" $columna[0] ";?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document ">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -76,7 +75,7 @@ $conn = mysqli_connect('localhost', 'root', '','multimediosdb2') or die (mysql_e
                                                 </div>
                                                 <div class="form-group">
                                                     <div class="input-group">
-                                                        <label for="cedula" class="input-group-addon">Césdula</label>
+                                                        <label for="cedula" class="input-group-addon">Cédula</label>
                                                         <input type="text" class="form-control" name="cedula" id="cedula">
                                                     </div>
                                                 </div>
