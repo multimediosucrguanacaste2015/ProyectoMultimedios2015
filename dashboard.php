@@ -61,7 +61,7 @@
                     </li>
                     <div id="section2" class="collapse collapse-in">
                         <ul class="nav nav-pills nav-stacked span3">
-                            <li><a href="">Agregar</a>
+                            <li><a href="#" id="agregarProfesor">Agregar</a>
                             </li>
                             <li><a href="">Modificar</a>
                             </li>
@@ -151,6 +151,9 @@
             });
             $("#agregarCurso").click(function (event) {
                 $("#contenido").load('formularios/agregarCurso.php');
+            });
+            $("#agregarProfesor").click(function (event) {
+                $("#contenido").load('formularios/agregarProfesor.php');
             });
 
 

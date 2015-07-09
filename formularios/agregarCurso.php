@@ -40,7 +40,7 @@
                        </h4>
                     </div>
                     <div class="panel-body">
-                        <form action="./mod/agregarNivel.php" method="post">
+                        <form action="./mod/agregarCurso.php" method="post">
                             <div class="form-group">
                                 <div class="input-group">
                                     <label for="nivel" class="input-group-addon">Nivel</label>
@@ -56,7 +56,12 @@
                                <div class="form-group">
                                 <div class="input-group">
                                     <label for="curso" class="input-group-addon">Curso</label>
-                                    <input type="text" name="curso" class="form-control" placeholder="ej:Matemática">
+                                    <input type="text" name="nombreCurso" class="form-control" placeholder="ej:Matemática">
+                                </div>
+                            </div><div class="form-group">
+                                <div class="input-group">
+                                    <label for="curso" class="input-group-addon">Sigla</label>
+                                    <input type="text" name="sigla" class="form-control" placeholder="ej:IF2100">
                                 </div>
                             </div>
                             <button class="btn btn-default" type="submit">Enviar</button>
