@@ -85,13 +85,13 @@
                             </li>-->
                         </ul>
                     </div>
-                    <!--     Sección Notas-->
+                    <!--     Sección Matricula y notas-->
                     <li id="accordion4">
                         <a data-toggle="collapse" data-parent="#accordion4" href="#section4"><span class="glyphicon glyphicon-list-alt"></span>  Matricula</a>
                     </li>
                     <div id="section4" class="collapse collapse-in">
                         <ul class="nav nav-pills nav-stacked span3">
-                            <li><a href="#">Agregar</a>
+                            <li><a href="#" id="matricular">Matricular Estudiante</a>
                             </li>
                             <li><a href="#">Modificar</a>
                             </li>
@@ -154,6 +154,9 @@
             });
             $("#agregarProfesor").click(function (event) {
                 $("#contenido").load('formularios/agregarProfesor.php');
+            });
+            $("#matricular").click(function (event) {
+                $("#contenido").load('formularios/matricularEstudiante.php');
             });
 
 

@@ -10,7 +10,6 @@ $conn = mysqli_connect('localhost', 'root', '','multimediosdb2') or die (mysql_e
     <table class="table table-hover">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Carnet</th>
                 <th>Nombre</th>
                 <th>P Apellido</th>
@@ -19,6 +18,7 @@ $conn = mysqli_connect('localhost', 'root', '','multimediosdb2') or die (mysql_e
                 <th>Sexo</th>
                 <th>Telefono</th>
                 <th>Dirección</th>
+                <th>A. Padre</th>
             </tr>
         </thead>
         <?php
@@ -27,9 +27,7 @@ $conn = mysqli_connect('localhost', 'root', '','multimediosdb2') or die (mysql_e
 
             <tbody>
                 <tr>
-                    <td>
-                        <?php echo"$columna[0]"?>
-                    </td>
+
                     <td>
                         <?php echo"$columna[1]"?>
                     </td>
@@ -56,9 +54,9 @@ $conn = mysqli_connect('localhost', 'root', '','multimediosdb2') or die (mysql_e
                     </td>
                     <td>
 
-                        <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#padre<?php echo"$columna[0]"?>"></span></a>
+                        <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#padre<?php echo $columna[0]?>"></span></a>
                         <div class="container-fluid">
-                            <div class="modal fade " id="padre<?php echo" $columna[0] ";?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="padre<?php echo $columna[0];?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document ">
                                     <div class="modal-content">
                                         <div class="modal-header">

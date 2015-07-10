@@ -43,45 +43,71 @@ $conn = mysqli_connect('localhost', 'root', '','multimediosdb2') or die (mysql_e
                   <td>
 
 
-                        <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#curso<?php echo"$columna[0]"?>"></span></a>
+                        <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#modalCurso<?php echo $columna[0]?>"></span></a>
                         <div class="container-fluid">
-                            <div class="modal fade " id="curso<?php echo" $columna[0] ";?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal fade " id="modalCurso<?php echo $columna[0] ;?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document ">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h4 class="modal-title">Agregar Profesor</h4>
+                                            <h4 class="modal-title">Asignar cursos-niveles</h4>
                                         </div>
                                         <div class="modal-body">
-                                            <form class="agregar-profesor<?php echo $columna[0] ?>">
-                                                <!--<form method="post" action="mod/agregarPadre.php">-->
-                                                <input type="text" name="idEstudiante" id="idEstudiante" value="<?php echo" $columna[0] "?>">
+                                            <form action="mod/asignarNivelCurso.php" method="post">
                                                 <div class="form-group">
                                                     <div class="input-group">
-                                                        <label for="nombre" class="input-group-addon">Nombre</label>
-                                                        <input type="text" class="form-control" name="nombre" id="nombre">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <div class="input-group">
-                                                        <label for="apellido1 " class="input-group-addon">Apellido 1</label>
-                                                        <input type="text" class="form-control" name="apellido1" id="apellido1">
+                                                        <label for="idProfesor" class="input-group-addon">Profesor</label>
+                                                        <input type="text" class="form-control" name="idProfesor" id="idProfesor" value="<?php echo $columna[0];?>">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <div class="input-group ">
-                                                        <label for="apellido2" class="input-group-addon">Apellido 2</label>
-                                                        <input type="text" class="form-control" name="apellido2" id="apellido2">
+                                                        <label for="nivel" class="input-group-addon">Nivel</label>
+                                                                             <?php
+
+$conn = mysqli_connect('localhost', 'root', '','multimediosdb2') or die (mysql_error ());
+                                                        $consulta = "SELECT * FROM Niveles;";
+                                                                $resultado =   mysqli_query($conn, $consulta) or die("error". mysql_error());
+                                                                ?>
+
+                                                        <select name="nivel" id="niveles" class="form-control">
+                                                           <?php while ($columnaNivel = mysqli_fetch_row($resultado)){
+                                                            echo"<option value=\"$columnaNivel[0]\">$columnaNivel[1]</option>";
+                                                            }?>
+                                                        </select><?php
+
+                                                            ?>
                                                     </div>
                                                 </div>
-                                                <div class="form-group">
+                                                   <!--Cursos-->
+                                                   <div class="form-group">
+                                                    <div class="input-group ">
+                                                        <label for="cursos" class="input-group-addon">Cursos</label>
+                                                                             <?php
+
+$conn = mysqli_connect('localhost', 'root', '','multimediosdb2') or die (mysql_error ());
+                                                        $consulta = "SELECT * FROM Cursos;";
+                                                                $resultado =   mysqli_query($conn, $consulta) or die("error". mysql_error());
+                                                                ?>
+
+                                                        <select name="cursos" id ="cursos" class="form-control">
+                                                           <?php while ($columnaCurso = mysqli_fetch_row($resultado)){
+                                                            echo"<option value=\"$columnaCurso[0]\">$columnaCurso[1]</option>";
+                                                            }?>
+                                                        </select><?php
+
+                                                            ?>
+                                                    </div>
+                                                </div>
+                                                <!--<div class="form-group">
                                                     <div class="input-group">
                                                         <label for="cedula" class="input-group-addon">Cédula</label>
                                                         <input type="text" class="form-control" name="cedula" id="cedula">
                                                     </div>
                                                 </div>
+-->
+<!--    <button class="btn btn-info" type="submit">Enviar</button>-->
+    <button class="btn btn-info" type="submit">Enviar</button>
 
-
-                                                <button class="btn btn-info" onclick="agregarPadre('<?php echo $columna[0];?>')" data-dismiss="modal">Enviar</button>
                                             </form>
 
 
@@ -96,24 +122,7 @@ $conn = mysqli_connect('localhost', 'root', '','multimediosdb2') or die (mysql_e
                 </tr>
             </tbody>
 
-            <script>
-                //
-                function agregarPadre(str) {
-                    var id = str;
-                    alert(id);
-                    $.ajax({
-                        type: "POST",
-                        url: "mod/agregarProfesor.php",
-                        data: $('form.agregar-profesor' + id).serialize(),
-                        success: function() {
-                            alert("Exitoso");
-                        },
-                        error: function() {
-                            alert("failure");
-                        }
-                    });
-                }
-            </script>
+
             <?php
         }
 
