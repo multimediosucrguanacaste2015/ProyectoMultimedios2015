@@ -54,7 +54,7 @@
             $.ajax({
                 type:"post",
                 url:"mod/agregarSeccion.php",
-                data:{nivel:$("#niveles").val(), seccion:$("#seccion").val()},
+                data:{niveles:$("#niveles").val(), seccion:$("#seccion").val()},
                 success: function(){
                     alert("Sección agregada correctamente");
                 }

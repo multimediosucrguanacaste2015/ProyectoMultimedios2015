@@ -81,6 +81,8 @@
                             </li>-->
                             <li><a href="#" id="agregarCurso">Agregar Curso</a>
                             </li>
+                            <li><a href="#" id="agregarSeccion">Agregar Sección</a>
+                            </li>
                             <!--<li><a href="">Notas</a>
                             </li>-->
                         </ul>
@@ -157,6 +159,9 @@
             });
             $("#matricular").click(function (event) {
                 $("#contenido").load('formularios/matricularEstudiante.php');
+            });
+            $("#agregarSeccion").click(function (event) {
+                $("#contenido").load('formularios/agregarSeccion.php');
             });
 
 

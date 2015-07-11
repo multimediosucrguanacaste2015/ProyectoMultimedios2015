@@ -35,7 +35,7 @@
                 <label for="nivel" class="input-group-addon">Nivel</label>
                  <?php
                     $conn = mysqli_connect('localhost', 'root', '','multimediosdb2') or die (mysql_error ());
-                    $consulta = "SELECT * FROM Niveles;";
+                    $consulta = "SELECT * FROM Secciones;";
                     $resultado =   mysqli_query($conn, $consulta) or die("error". mysql_error());
                 ?>
                 <select name="nivel" id="niveles" class="form-control">
