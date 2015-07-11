@@ -8,7 +8,7 @@ $conn = mysqli_connect('localhost', 'root', '','multimediosdb2') or die (mysql_e
 
     $columna = mysqli_fetch_row($resultadoEstudiante);
 
-    $consultaNivelEstudiante ="INSERT INTO multimediosdb2.Estudiantes_Matriculados (Estudiantes_Id, Niveles_Id)
+    $consultaNivelEstudiante ="INSERT INTO multimediosdb2.Estudiantes_Matriculados (Estudiantes_Id, Secciones_Id)
     VALUES('$columna[0]', '$idNivel')";
     mysqli_query($conn, $consultaNivelEstudiante) or die('Error en la consulta'. mysql_error());
 ?>

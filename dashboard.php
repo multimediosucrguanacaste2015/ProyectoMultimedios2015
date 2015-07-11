@@ -129,6 +129,13 @@
                                 <img class="img-responsive" src="img/checking1.svg" alt="">
                                 <h1>Bienvenido al sistema de control de estudiantes</h1>
                                 <p> El sistema le permitirá gestionar los estudiantes, sus cursos y notas asociadas, así como también los profesores asignados a cada curso y los respectivos niveles en los cuales se imparten.</p>
+                                <h4>Consideraciones:</h4>
+                                <ul>
+                                    <li>En algunos casos despúes de la inserción de los datos se retorna a la página principal, pero la operación se realizó con éxito.</li>
+                                    <li>La matricula de los estudiantes se realiza en la sección Matricula y se hace con el número de carnet, los estudiantes deben estar previamente ingresados en el sistema</li>
+                                    <li>Antes de proceder a matricular se deben haber ingresado, los niveles y las secciones</li>
+
+                                </ul>
                             </div>
 
                         </div>
