@@ -95,7 +95,7 @@
                         <ul class="nav nav-pills nav-stacked span3">
                             <li><a href="#" id="matricular">Matricular Estudiante</a>
                             </li>
-                            <li><a href="#">Modificar</a>
+                            <li><a href="#" id="matriculados">Mostrar Matriculados</a>
                             </li>
                             <li><a href="#">Borrar</a>
                             </li>
@@ -169,6 +169,9 @@
             });
             $("#agregarSeccion").click(function (event) {
                 $("#contenido").load('formularios/agregarSeccion.php');
+            });
+            $("#matriculados").click(function (event) {
+                $("#contenido").load('formularios/mostrarEstudiantesMatriculados.php');
             });
 
 
