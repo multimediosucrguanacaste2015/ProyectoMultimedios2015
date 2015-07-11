@@ -6,10 +6,10 @@ $conn = mysqli_connect('localhost', 'root', '','multimediosdb2') or die (mysql_e
 FROM Estudiantes_Matriculados
 JOIN Secciones ON Estudiantes_Matriculados.Secciones_Id = Secciones.Id
 JOIN Estudiantes ON Estudiantes_Matriculados.Estudiantes_Id = Estudiantes.Id
-Where  Secciones.Seccion_Numero ='7-1'";
-            $resultadoEstudiante = mysqli_query($conn, $consultaEstudianteMatriculado) or die('Error en la consulta' . mysql_error());
-            ?>
-            <table class="table table-hover">
+Where  Secciones.Seccion_Numero ='$Seccion'";
+            $resultadoEstudiante = mysqli_query($conn, $consultaEstudianteMatriculado) or die('Error en la consulta' .mysql_error());
+            echo"<h1>$Seccion</h1>";
+echo" <table class=\"table table-hover\">
                 <thead>
                     <tr>
                         <th>Carnet</th>
@@ -19,21 +19,23 @@ Where  Secciones.Seccion_Numero ='7-1'";
                         <th>Sección</th>
                     </tr>
                 </thead>
-                <?php
+                ";
+
                 if(mysqli_num_rows($resultadoEstudiante)> 0){
                     while($columna = mysqli_fetch_row($resultadoEstudiante)){
 
-                ?>
-                <tbody>
-                    <td><?php echo $columna[0]?></td>
-                    <td><?php echo $columna[1]?></td>
-                    <td><?php echo $columna[2]?></td>
-                    <td><?php echo $columna[3]?></td>
-                    <td><?php echo $columna[4]?></td>
-                </tbody>
-                <?php
+                echo" <tbody>
+                    <td>$columna[0]</td>
+                    <td>$columna[1]</td>
+                    <td>$columna[2]</td>
+                    <td>$columna[3]</td>
+                    <td>$columna[4]</td>
+                </tbody>";
+
+
                 }
-                }?>
-            </table>
-            <?php
+                }
+           echo"</table>";
+
+
 ?>

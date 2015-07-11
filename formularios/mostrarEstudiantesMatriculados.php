@@ -58,8 +58,8 @@
                 type:"post",
                 url:"mod/mostrarMatricula.php",
                 data:{niveles:$("#niveles").val()},
-                success: function despues(){
-                    $("#tabla-datos").load('mod/mostrarMatricula.php');
+                success: function (resp){
+                    $("#tabla-datos").html(resp);
                 }
             });
         }
