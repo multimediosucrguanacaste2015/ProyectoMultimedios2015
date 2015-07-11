@@ -97,12 +97,14 @@
                             </li>
                             <li><a href="#" id="matriculados">Mostrar Matriculados</a>
                             </li>
-                            <li><a href="#">Borrar</a>
+                            <li><a href="#" id="notas" >Notas</a>
+                            </li>
+                            <li><a href="#" id="consulta-notas" >Mostrar Notas</a>
                             </li>
                         </ul>
                     </div>
                     <!--     Sección Reportes-->
-                    <li id="accordion5">
+                 <!--   <li id="accordion5">
                         <a data-toggle="collapse" data-parent="#accordion5" href="#section5"><span class="glyphicon glyphicon-file"></span>  Reportes</a>
                     </li>
                     <div id="section5" class="collapse collapse-in">
@@ -116,7 +118,7 @@
                         </ul>
                     </div>
 
-                </ul>
+                </ul>-->
 
 
             </div>
@@ -129,6 +131,7 @@
                                 <img class="img-responsive" src="img/checking1.svg" alt="">
                                 <h1>Bienvenido al sistema de control de estudiantes</h1>
                                 <p> El sistema le permitirá gestionar los estudiantes, sus cursos y notas asociadas, así como también los profesores asignados a cada curso y los respectivos niveles en los cuales se imparten.</p>
+                                <h3>Los reportes de lista de clases e informe al hogar se encuentran en el menú Matricula, con el identificador mostrar</h3>
                                 <h4>Consideraciones:</h4>
                                 <ul>
                                     <li>En algunos casos despúes de la inserción de los datos se retorna a la página principal, pero la operación se realizó con éxito.</li>
@@ -172,6 +175,12 @@
             });
             $("#matriculados").click(function (event) {
                 $("#contenido").load('formularios/mostrarEstudiantesMatriculados.php');
+            });
+            $("#notas").click(function (event) {
+                $("#contenido").load('formularios/agregarNotaEstudiante.php');
+            });
+            $("#consulta-notas").click(function (event) {
+                $("#contenido").load('formularios/mostrarNotasEstudiantes.php');
             });
 
 

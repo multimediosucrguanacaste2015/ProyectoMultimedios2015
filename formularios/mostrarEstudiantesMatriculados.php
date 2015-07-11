@@ -21,7 +21,7 @@
 <body>
 
     <div class="container-fluid">
-      <form>
+      <form action="mod/generarPdfLista.php" method="post">
            <div class="form-group">
           <h4>Listar los estudiantes matriculados por sección</h4>
            <div class="input-group">
@@ -31,7 +31,7 @@
                     $consulta = "SELECT * FROM Secciones;";
                     $resultado =   mysqli_query($conn, $consulta) or die("error". mysql_error());
                 ?>
-                <select name="nivel" id="niveles" class="form-control">
+                <select name="niveles" id="niveles" class="form-control">
                     <?php while ($columnaNivel = mysqli_fetch_row($resultado)){
                         echo"<option value=\"$columnaNivel[1]\">$columnaNivel[1]</option>";
                     }
@@ -42,8 +42,10 @@
        </div>
        <!--<button class="btn btn-default" onclick="consultarMatricula()">Enviar</button>-->
        <a href="#" onclick="consultarMatricula()" class="btn btn-default">Consultar</a>
-       <a href="#" class="btn btn-warning"onclick="generarPdf()">Generar Pdf</a>
+
+       <button class="btn btn-warning" type="submit">Generar Pdf</button>
       </form>
+
     <div id="tabla-datos">
 
     </div>
@@ -64,6 +66,16 @@
                 }
             });
         }
+        /*function generarPdf(){
+            $.ajax({
+                type:"post",
+                url:"mod/generarPdfLista.php",
+                data:{niveles:$("#niveles").val()},
+                success: function (resp){
+                    alert("Generando");
+                }
+            });
+        }*/
     </script>
 </body>
 </html>
