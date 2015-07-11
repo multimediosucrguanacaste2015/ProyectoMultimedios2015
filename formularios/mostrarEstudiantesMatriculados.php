@@ -42,6 +42,7 @@
        </div>
        <!--<button class="btn btn-default" onclick="consultarMatricula()">Enviar</button>-->
        <a href="#" onclick="consultarMatricula()" class="btn btn-default">Consultar</a>
+       <a href="#" class="btn btn-warning"onclick="generarPdf()">Generar Pdf</a>
       </form>
     <div id="tabla-datos">
 

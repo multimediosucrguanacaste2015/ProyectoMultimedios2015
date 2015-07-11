@@ -8,7 +8,7 @@ JOIN Secciones ON Estudiantes_Matriculados.Secciones_Id = Secciones.Id
 JOIN Estudiantes ON Estudiantes_Matriculados.Estudiantes_Id = Estudiantes.Id
 Where  Secciones.Seccion_Numero ='$Seccion'";
             $resultadoEstudiante = mysqli_query($conn, $consultaEstudianteMatriculado) or die('Error en la consulta' .mysql_error());
-            echo"<h1>$Seccion</h1>";
+
 echo" <table class=\"table table-hover\">
                 <thead>
                     <tr>
