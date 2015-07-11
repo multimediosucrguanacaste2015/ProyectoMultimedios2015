@@ -34,11 +34,8 @@
         <div class="row">
             <div class="col-md-1 col-md-offset-1"></div>
             <div class="col-md-9">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">Datos estudiante</h4>
-                    </div>
-                    <div class="panel-body">
+
+
                         <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#agregarNivelModal"> Agregar</span></a>
                         <button href="#" class="btn btn-info" onclick="cargarTabla()" id="btn-refrescar"><span class="glyphicon glyphicon-refresh"> Refrescar</span>
                         </button>
@@ -85,7 +82,7 @@
                                                 <div class="form-group">
                                                     <div class="input-group">
                                                         <label for="descripcion" class="input-group-addon">Telefono</label>
-                                                        <input type="text" class="form-control" name="carnet" id="carnet">
+                                                        <input type="text" class="form-control" name="telefono" id="telefono">
                                                     </div>
                                                 </div>
                                                 <div class="radio">
@@ -114,8 +111,8 @@
                         <div id="tabla">
 
                         </div>
-                    </div>
-                </div>
+
+
             </div>
         </div>
     </div>

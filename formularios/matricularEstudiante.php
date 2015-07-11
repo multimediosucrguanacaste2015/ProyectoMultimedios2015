@@ -46,7 +46,7 @@
                 </select><?php
                 ?>
           </div>
-
+          </div>
       </form>
       <button class="btn btn-info" id="boton" onclick="matricular()">Enviar</button>
     </div>

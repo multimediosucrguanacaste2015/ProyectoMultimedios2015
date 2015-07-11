@@ -65,7 +65,7 @@ $conn = mysqli_connect('localhost', 'root', '','multimediosdb2') or die (mysql_e
                                         <div class="modal-body">
                                             <form class="agregar-padre<?php echo $columna[0] ?>">
                                                 <!--<form method="post" action="mod/agregarPadre.php">-->
-                                                <input type="text" name="idEstudiante" id="idEstudiante" value="<?php echo" $columna[0] "?>">
+                                                <input type="hidden" name="idEstudiante" id="idEstudiante" value="<?php echo" $columna[0] "?>">
                                                 <div class="form-group">
                                                     <div class="input-group">
                                                         <label for="nombre" class="input-group-addon">Nombre</label>
@@ -148,7 +148,7 @@ $conn = mysqli_connect('localhost', 'root', '','multimediosdb2') or die (mysql_e
                         url: "mod/agregarPadre.php",
                         data: $('form.agregar-padre' + id).serialize(),
                         success: function() {
-                            alert("Exitoso");
+                            alert("Padre añadido exitosamente al estudiante respectivo");
                         },
                         error: function() {
                             alert("failure");
