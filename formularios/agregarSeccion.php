@@ -44,7 +44,7 @@
                 ?>
            </div>
        </form>
-       <button class="btn btn-default" onclick="agregarSeccion()"></button>
+       <button class="btn btn-default" onclick="agregarSeccion()">Enviar</button>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
