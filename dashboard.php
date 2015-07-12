@@ -63,7 +63,7 @@
                         <ul class="nav nav-pills nav-stacked span3">
                             <li><a href="#" id="agregarProfesor">Agregar</a>
                             </li>
-                            <li><a href="">Modificar</a>
+                            <li><a href="#" id="cursos-asignados">Mostrar Cursos Asignados</a>
                             </li>
                             <li><a href="">Borrar</a>
                             </li>
@@ -181,6 +181,9 @@
             });
             $("#consulta-notas").click(function (event) {
                 $("#contenido").load('formularios/mostrarNotasEstudiantes.php');
+            });
+            $("#cursos-asignados").click(function (event) {
+                $("#contenido").load('formularios/mostrarCursosAsignados.php');
             });
 
 
