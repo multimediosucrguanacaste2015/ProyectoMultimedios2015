@@ -97,7 +97,7 @@
                             </li>
                             <li><a href="#" id="matriculados">Mostrar Matriculados</a>
                             </li>
-                            <li><a href="#" id="notas" >Notas</a>
+                            <li><a href="#" id="notas">Asignar Notas</a>
                             </li>
                             <li><a href="#" id="consulta-notas" >Mostrar Notas</a>
                             </li>

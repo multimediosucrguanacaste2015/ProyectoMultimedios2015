@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="css/main">
+    <link rel="stylesheet" href="css/main.css">
     <style>body{padding-top:50px;}.starter-template{padding:40px 15px;text-align:center;}</style>
 
     <!--[if IE]>
@@ -20,13 +20,14 @@
 
 <body>
     <div class="container-fluid">
-       <form>
+       <form action="mod/generarPdfNota.php" method="post">
            <div class="form-group">
                <div class="input-group">
                    <label for="" class="input-group-addon">Carnet</label>
-                   <input type="text" class="form-control" id="carnet"></div>
+                   <input type="text" class="form-control" id="carnet" name="carnet" required></div>
            </div>
            <a href="#" class="btn btn-default" onclick="consultarNota()">Consultar</a>
+           <button class="btn btn-warning" type="submit">Generar PDF</button>
        </form>
        <div id="tabla-datos">
 

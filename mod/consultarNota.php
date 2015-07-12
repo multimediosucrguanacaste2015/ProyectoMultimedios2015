@@ -16,7 +16,7 @@ JOIN Cursos ON Curso_Nivel_Profesor.Cursos_Id = Cursos.Id
 WHERE Estudiantes_Matriculados_Id = '$idEstudiante[0]'";
             $resultadoNota = mysqli_query($conn, $consultaNota) or die('Error en la consulta' .mysql_error());
 
-echo" <table class=\"table table-hover\">
+   echo" <table class=\"table table-hover\">
                 <thead>
                     <tr>
                         <th>Nombre</th>
@@ -49,6 +49,7 @@ echo" <table class=\"table table-hover\">
                 }
                 }
            echo"</table>";
+
 
 
 ?>
