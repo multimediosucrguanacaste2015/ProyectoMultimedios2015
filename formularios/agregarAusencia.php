@@ -19,17 +19,17 @@
 </head>
 
 <body>
-    <div class="container">
-        <form>
+    <div class="container-fluid">
+        <form action="mod/listarEst.php" method="post">
            <div class="form-group">
                <div class="input-group">
                    <label for="carnet" class="input-group-addon">Carnet</label>
-                   <input type="text" class="form-control" id="carnet"></div>
+                   <input type="text" class="form-control" name="carnet" id="carnet"></div>
            </div>
               <div class="form-group">
                <div class="input-group">
                    <label for="fecha" class="input-group-addon">Fecha</label>
-                   <input type="date" class="form-control" id="fecha"></div>
+                   <input type="date" class="form-control" name="fecha" id="fecha"></div>
            </div>
            <div class="form-group">
                <div class="input-group">
@@ -58,7 +58,8 @@
                 ?>
           </div>
           </div>
-          <a href="#" class="btn btn-default" onclick="listarEstudiantes()">Listar</a>
+          <a href="#" class="btn btn-default" onclick="listarEstudiantes()">Enviar</a>
+          <button class="btn btn-default" type="submit">Submit</button>
         </form>
         <div class="tabla-datos">
 
@@ -72,7 +73,7 @@
             $.ajax({
                 type:"post",
                 url:"mod/listarEst.php",
-                data:{niveles:$("#niveles").val()},
+                data:{carnet:$("#carnet").val(), cursos:$("#cursos").val(), fecha:$("#fecha").val(), tipo:$("#tipo").val()},
                 success: function(resp){
                     $("#tabla-datos").html(resp);
                 }

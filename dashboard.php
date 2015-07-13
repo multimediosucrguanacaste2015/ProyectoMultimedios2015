@@ -104,21 +104,18 @@
                         </ul>
                     </div>
                     <!--     Sección Reportes-->
-                 <!--   <li id="accordion5">
-                        <a data-toggle="collapse" data-parent="#accordion5" href="#section5"><span class="glyphicon glyphicon-file"></span>  Reportes</a>
+                    <li id="accordion5">
+                        <a data-toggle="collapse" data-parent="#accordion5" href="#section5"><span class="glyphicon glyphicon-file"></span>  Ausencias</a>
                     </li>
                     <div id="section5" class="collapse collapse-in">
                         <ul class="nav nav-pills nav-stacked span3">
-                            <li><a href="">Agregar</a>
+                            <li><a href="#" id="agregar-ausencia">Agregar ausencia</a>
                             </li>
-                            <li><a href="">Modificar</a>
-                            </li>
-                            <li><a href="">Borrar</a>
-                            </li>
+
                         </ul>
                     </div>
 
-                </ul>-->
+                </ul>
 
 
             </div>
@@ -184,6 +181,9 @@
             });
             $("#cursos-asignados").click(function (event) {
                 $("#contenido").load('formularios/mostrarCursosAsignados.php');
+            });
+            $("#agregar-ausencia").click(function (event) {
+                $("#contenido").load('formularios/agregarAusencia.php');
             });
 
 

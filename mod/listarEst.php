@@ -20,5 +20,7 @@ $resultadoCurId = mysqli_query($conn, $consultaCurId);
 $idCurId = mysqli_fetch_row($resultadoCurId);
 
 // consulta inserción y query.
+$insertarAusencia = "INSERT INTO Ausencias_Tardias_Escapadas(Fecha, Estudiantes_Matriculados_Id, Curso_Nivel_Id, Justificacion, Tipo) VALUES('$fecha', '$idEstMat[0]', '$idCurId[0]', 'I','$tipo');";
+mysqli_query($conn, $insertarAusencia);
 
 ?>
