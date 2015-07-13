@@ -20,7 +20,7 @@
 
 <body>
     <div class="container-fluid">
-        <form action="mod/listarEst.php" method="post">
+        <form>
            <div class="form-group">
                <div class="input-group">
                    <label for="carnet" class="input-group-addon">Carnet</label>
@@ -59,7 +59,7 @@
           </div>
           </div>
           <a href="#" class="btn btn-default" onclick="listarEstudiantes()">Enviar</a>
-          <button class="btn btn-default" type="submit">Submit</button>
+          <!--<button class="btn btn-default" type="submit">Submit</button>-->
         </form>
         <div class="tabla-datos">
 
@@ -70,12 +70,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script>
         function listarEstudiantes(){
+            var carnet = $("#carnet").val();
             $.ajax({
                 type:"post",
                 url:"mod/listarEst.php",
                 data:{carnet:$("#carnet").val(), cursos:$("#cursos").val(), fecha:$("#fecha").val(), tipo:$("#tipo").val()},
                 success: function(resp){
-                    $("#tabla-datos").html(resp);
+                    alert("Ausencia Asignada Correctamente al estudiante con carnet "+carnet);
                 }
             });
         }
